@@ -13,7 +13,7 @@ class DataGathering:
             sleep(int(self.refresh_freq))
             temp = get_cpu_temperature()
             ram = get_ram()
-            print (f'CPU: {temp} C  |  MEM: {str(ram)}')
+            print (f'CPU: {str(temp)} C  |  MEM: {str(ram)}')
             if len(self.temp_list) > 100:
                 self.temp_list.pop(0)
             if len(self.ram_list) > 100:

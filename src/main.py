@@ -1,10 +1,11 @@
-from src.lib.gathering import DataGathering as dg
+#!/usr/bin/env 
+from src.lib import gathering as dg
 import sys
 import threading
 
 
 def data_recovery(freq: float):
-    data_recovery_object = dg(freq)
+    data_recovery_object = dg.DataGathering(freq)
     data_recovery_object.retrieve_data()
    
 

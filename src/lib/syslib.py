@@ -4,9 +4,9 @@ import os
 #CPU Temp
 def get_cpu_temperature():
     """get cpu temperature using vcgencmd"""
-    process = Popen(['vcgencmd', 'measure_temp'], stdout=PIPE)
-    output, _error = process.communicate()
-    return float(output[output.index('=') + 1:output.rindex("'")])
+    process = os.popen(['vcgencmd measure_temp'])
+    line = process.readline()
+    return line[4:]
 
 #Memory Information
 def get_ram():

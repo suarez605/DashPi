@@ -1,8 +1,5 @@
-import csv
-from ..syslib import syslib
-import threading
-from time import time, sleep
-import pandas as pd
+from .syslib import get_cpu_temperature, get_ram
+from time import sleep
 
 class DataGathering:
 
@@ -14,8 +11,8 @@ class DataGathering:
     async def retrieve_data(self):
         while True:
             sleep(self.refresh_freq)
-            temp = syslib.get_cpu_temperature()
-            ram = syslib.get_ram()
+            temp = get_cpu_temperature()
+            ram = get_ram()
             print (f'CPU: {temp} C  |  MEM: {ram}')
             if len(self.temp_list) > 100:
                 self.temp_list.pop(0)

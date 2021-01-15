@@ -9,7 +9,7 @@ async def get_cpu_temperature():
     return float(output[output.index('=') + 1:output.rindex("'")])
 
 #Memory Information
-async def getFreeDescription():
+async def get_ram():
     free = os.popen("free -h")
     line = free.readline()
     description = line.split()[0:7]
@@ -20,4 +20,4 @@ async def getFreeDescription():
     for desc in description:
         result[desc] = data[count]
         count += 1
-    return result                                  
+    return result

@@ -1,4 +1,4 @@
-from .lib.gathering import DataGathering as dg
+from src.lib.gathering import DataGathering as dg
 import sys
 import threading
 

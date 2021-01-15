@@ -1,4 +1,4 @@
-from src.lib.gathering import get_cpu_temperature, get_ram
+from  .syslib import get_cpu_temperature, get_ram
 from time import sleep
 
 class DataGathering:

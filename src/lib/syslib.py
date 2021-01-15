@@ -4,7 +4,7 @@ import os
 #CPU Temp
 def get_cpu_temperature():
     """get cpu temperature using vcgencmd"""
-    process = os.popen(['vcgencmd measure_temp'])
+    process = os.popen('vcgencmd measure_temp')
     line = process.readline()
     return line[4:]
 

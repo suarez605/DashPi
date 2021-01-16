@@ -14,7 +14,7 @@ def data_recovery(freq: float):
     data_recovery_object.retrieve_data()
 
 
-app = Flask()
+app = Flask(__name__)
 
 
 @app.route('/', )

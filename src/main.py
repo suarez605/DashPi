@@ -24,6 +24,6 @@ def get_data():
 if __name__ == "__main__":
     x = threading.Thread(target=data_recovery, args=(freq,), daemon=True)
     x.start()
-    app.run(host='127.0.0.1', port=80)
+    app.run(host='0.0.0.0', port=80)
 
 
